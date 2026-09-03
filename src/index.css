@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-tv-bg: #ffffff;
+  --color-tv-card: #f8f9fd;
+  --color-tv-cardHover: #f0f3fa;
+  --color-tv-border: #e0e3eb;
+  --color-tv-textPrimary: #131722;
+  --color-tv-textSecondary: #787b86;
+  --color-tv-textLight: #b2b5be;
+  --color-tv-blue: #2962ff;
+  --color-tv-blueHover: #1e53e5;
+  --color-tv-green: #089981;
+  --color-tv-greenBg: #e7f6f2;
+  --color-tv-red: #f23645;
+  --color-tv-redBg: #fef0f1;
+  --color-tv-badgeNasdaq: #00a4e4;
+  --color-tv-badgeSp: #d32f2f;
+  --color-tv-badgeDow: #00838f;
+  --color-tv-badgeRussell: #5e35b1;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d4dc;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a3a6af;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes flashGreen {
+  0% { background-color: rgba(8, 153, 129, 0.2); }
+  100% { background-color: transparent; }
+}
+
+@keyframes flashRed {
+  0% { background-color: rgba(242, 54, 69, 0.2); }
+  100% { background-color: transparent; }
+}
+
+.flash-up {
+  animation: flashGreen 1.2s ease-out;
+}
+
+.flash-down {
+  animation: flashRed 1.2s ease-out;
+}
